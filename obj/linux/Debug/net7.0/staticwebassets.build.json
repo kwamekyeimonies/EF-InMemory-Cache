@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "3LryMZiXT6UO5ZDV99q4VHTcTcU93h5byinplFC9CLQ=",
+  "Source": "InMemory_Cache",
+  "BasePath": "_content/InMemory_Cache",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,11 +1,18 @@
+using InMemory_Cache.Database;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+var dbConnectionString = builder.Configuration.GetConnectionString("PostgreSQL_URL");
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddEntityFrameworkNpgsql()
+.AddDbContext<ApiDbContext>(options => options.UseNpgsql(dbConnectionString));
 
 var app = builder.Build();
 
